@@ -10,7 +10,7 @@ var DefConf = {},
     isLogin = false,
     ProjectConfig = {
         debug: true,
-        app: 'Mall',
+        app: 'sellMall',
         host: window.location.host,
         api: 'http://localhost:8989/static/api/',
         // api: 'http://192.168.11.114:8989/static/api/',

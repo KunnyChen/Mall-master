@@ -1,10 +1,9 @@
 /**
  * @Author: Mink
- * @Contact: mink@feiruo.moe
  * @Description: 数据存取和操作
  * @Date: 2017-05-08 10:28:16
- * @Last Modified by:   lenovo
- * @Last Modified time: 2017-07-13 16:17:12
+ * @Last Modified by:   KunnyChen
+ * @Last Modified time: 2017-07-14 16:45:06
  */
 import Vue from 'vue';
 import Vuex from 'vuex';

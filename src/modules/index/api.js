@@ -1,8 +1,7 @@
 /*
  * @CreateTime: May 16, 2017 5:07 PM
- * @Author: Mink
- * @Contact: mink@feiruo.moe
- * @Last Modified By: Mink
+ * @Author: Kunny
+ * @Last Modified By: Kunny
  * @Last Modified Time: May 25, 2017 10:11 AM
  * @Description: API等设置
  */

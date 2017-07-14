@@ -1,0 +1,13 @@
+{
+    "code": 200,
+    "msg": "ok",
+    "serverCurrentTime": "2017/7/14 12:23:23",
+    "extrDatas": {
+        "shopImg":"/static/imgfood01.png",
+        "shopName":"必胜客",
+        "arrival_time":"40分钟",
+        "deliveryFee":"5",
+
+
+    }
+}

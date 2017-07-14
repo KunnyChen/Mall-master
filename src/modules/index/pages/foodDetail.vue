@@ -5,13 +5,11 @@
          width:100%
          display: flex
          margin: 5% 0
-         flex-wrap: wrap
         .banner_item
             width:25%
             text-align: center
             .banner_item_text
                 color:#888
-                margin-bottom: 8px
       .merchant
           padding:2% 3%
           border-top:8px solid #eee
@@ -65,15 +63,45 @@
                         position:absolute
                         right:0
                         .delivery_time
-                          color:rgb(43, 141, 232)
+                            color:rgb(43, 141, 232)
 </style>
 <template>
     <div  class="wrapper">
     <!-- banner滑动区域 -->
-        <div class="banner" >
-            <div class="banner_item" v-for="item in Index.banner">
-                <div class="banner_item_img"><img :src="item.img" alt=""></div>
-                <div class="banner_item_text">{{item.title}}</div>
+        <div class="banner">
+            <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food01.png" alt=""></div>
+                <div class="banner_item_text">下午茶</div>
+            </div>
+            <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food02.png" alt=""></div>
+                <div class="banner_item_text">甜品</div>
+            </div>
+            <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food03.png" alt=""></div>
+                <div class="banner_item_text">鲜果</div>
+            </div>
+            <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food04.png" alt=""></div>
+                <div class="banner_item_text">外卖</div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food01.png" alt=""></div>
+                <div class="banner_item_text">下午茶</div>
+            </div>
+            <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food02.png" alt=""></div>
+                <div class="banner_item_text">甜品</div>
+            </div>
+                <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food03.png" alt=""></div>
+                <div class="banner_item_text">鲜果</div>
+            </div>
+                <div class="banner_item">
+                <div class="banner_item_img"><img src="../../../assets/img/food04.png" alt=""></div>
+                <div class="banner_item_text">外卖</div>
             </div>
         </div>
         <!-- 附近的商家列表 -->
@@ -102,49 +130,4 @@
         </div>
     </div>
 </template>
-<script lang="babel">
-    import {mapGetters} from 'vuex';
-    import api from '../api';
-    export default{
-        data() {
-            return{};
-        },
-        computed: {
-            ...mapGetters({
-                Index:'Index/Index'
-            })
-        },
-        components: {
-
-        },
-        methods: {
-            goTo(path, query) {
-                this.$router.push({path: path, query });
-            }
-        },
-        async mounted() {
-            await this.$store.dispatch('Index/Index');
-            await this.$nextTick();
-            const path = this.$route.path;
-            const scrollTop = ls.get(path) || 0;
-            ls.remove(path);
-            window.scrollTo(0, scrollTop);
-        },
-        beforeRouteLeave(to, from, next) {
-            const scrollTop = document.body.scrollTop;
-            const path = from.path;
-            if (scrollTop) ls.set(path, scrollTop);
-            else ls.remove(path);
-            next();
-            this._setDefault(this);
-        },
-        metaInfo() {
-            var title = this.$store.state.title;
-            if (title != ProjectConfig.app)
-                title = ProjectConfig.app + '-' + title;
-            return {
-                title: title,
-            };
-        }
-    }
-</script>
+<script lang="babel"></script>

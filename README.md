@@ -28,7 +28,7 @@ npm run dev
 - /src/config.js     = 主要配置文件 包含接口等
 - /src/assets/     = 静态文件目录
 - /src/components/ = 公共组件目录
-- /src/modules/    = 多页面模块, 每个模块一个文件夹
+- /src/modules/    = 页面模块
 - /src/modules/*/index.html    = 页面模板
 - /src/modules/*/index.js    = 初始化入口
 - /src/modules/*/index.vue    = 入口VUE

@@ -3,8 +3,8 @@
  * @Contact: mink@feiruo.moe
  * @Description: 页面路由
  * @Date: 2017-07-13 10:27:22
- * @Last Modified by:   lenovo
- * @Last Modified time: 2017-07-13 16:22:51
+ * @Last Modified by:   KunnyChen
+ * @Last Modified time: 2017-07-14 15:24:19
  */
 
 import Vue from 'vue';
@@ -14,6 +14,8 @@ Vue.use(VueRouter);
 // 懒加载引入的多个模块
 // 页面路由
 const index = r => require.ensure([], () => r(require('./pages/index.vue')), 'index');
+const shop = r => require.ensure([], () => r(require('./pages/shop.vue')), 'shop');
+const foodDetail = r => require.ensure([], () => r(require('./pages/foodDetail.vue')), 'foodDetail');
 
 // 多页面路径配置
 export default new VueRouter({
@@ -30,11 +32,8 @@ export default new VueRouter({
         // root
         // { name: 'root', path:   '/', redirect:  '/index' },
         // UP
-        {
-            name: 'index',
-            path: '/',
-            component: index
-            // component: resolve => require(['./pages/index.vue'], resolve)
-        },
+        { name: 'index', path: '/', component: index },
+        { name: 'shop', path: '/shop', component: shop },
+        { name: 'foodDetail', path: '/foodDetail', component: foodDetail }
     ]
 });
