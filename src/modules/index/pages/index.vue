@@ -77,7 +77,7 @@
             </div>
         </div>
         <!-- 附近的商家列表 -->
-        <div class="merchant">
+        <div class="merchant" @click="goTo('/shop')">
             <div class="merchant_title"><span><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>附近商家</div>
             <ul>
                 <li class="merchant_list">
@@ -89,6 +89,7 @@
                             <span class="feature_tag">票</span>
                         </div>
                         <div class="star_graded">
+                            <span style="display: inline-block;"><star :score="grade"></star></span>
                             <span class="sell">月销售669单</span>
                             <span class="delivery_tag">蜂鸟专送</span>
                         </div>
@@ -105,9 +106,12 @@
 <script lang="babel">
     import {mapGetters} from 'vuex';
     import api from '../api';
+    import star from '../components/star.vue';
     export default{
         data() {
-            return{};
+            return{
+              grade:4.5,
+            };
         },
         computed: {
             ...mapGetters({
@@ -115,7 +119,7 @@
             })
         },
         components: {
-
+            star,
         },
         methods: {
             goTo(path, query) {
