@@ -29,6 +29,58 @@
                     background:rgb(76, 217, 100)
                     padding:2px
                     border-radius:3px
+        .foodWrap
+            display:flex
+            margin-bottom: 60px
+            .food_menu
+                flex:0 0 80px
+                width:80px
+                background: rgb(248, 248, 248)
+                &>ul>li
+                    line-height: 45px
+                    border-bottom: 1px solid #eee
+                    text-align: center
+                    color:rgb(98, 98, 98)
+                &>ul .menu_active
+                    background: #fff;
+                    border-left: 3px solid rgb(49, 144, 232)
+                    font-weight: 600
+            .food_list
+                flex:1
+                .food_list_title
+                    line-height:45px
+                    background: rgb(248, 248, 248)
+                    font-size:1.5em
+                &>ul>li
+                    display:flex
+                    padding: 3%
+                    border-bottom: 1px solid #eee
+                    .food_img
+                        flex:1
+                    .food_content
+                        flex:3
+                        padding-left: 8px
+                        .food_name
+                            font-weight:600
+                            font-size:1.2em
+                            padding-bottom:4px
+                        .food_describe
+                            color:#ccc
+                            font-size:.8em
+                        &>div:nth-child(3)
+                            color:#888
+                            letter-spacing: 1px;
+                            padding: 4px 0
+                        &>div:last-child
+                            display:flex
+                            position: relative;
+                            p
+                                color:#888
+                                span
+                                    color:rgb(255, 67, 26)
+                            .cartcontrol_wrap
+                                position: absolute
+                                right: 0
 
 </style>
 <template>
@@ -37,7 +89,7 @@
         <header class="shop_header">
             <!-- shop_detail start -->
             <div class="shop_detail">
-                <div class="shop_img"><img src="../../../assets/img/preloader.png"></div>
+                <div class="shop_img"><img src="../../../assets/img/BSK.png"></div>
                 <div class="shop_content">
                     <p>必胜客（新世界店）</p>
                     <p>商家配送 / 40分钟送达 / 配送费￥5</p>
@@ -56,19 +108,25 @@
         <!-- 滚动菜单选择列表开始-->
         <div class="foodWrap">
             <!-- 左侧菜单 -->
-            <div class="menu">
+            <div class="food_menu">
                 <ul>
-                    <li>热销榜</li>
+                    <li class="menu_active">热销榜</li>
+                    <li>优惠</li>
+                    <li>尝鲜</li>
+                    <li>意面</li>
+                    <li>披萨</li>
+                    <li>饭类</li>
                 </ul>
             </div>
             <!-- 右侧食物列表 -->
-            <div class="foodList">
+            <div class="food_list">
+                <div class="food_list_title">热销榜</div>
                 <ul>
                     <li>
-                        <div class="food_img"><img src="../../../assets/img/preloader.png" ></div>
+                        <div class="food_img"><img src="../../../assets/img/pizza.png" width="100%"></div>
                         <div class="food_content">
-                            <div>浓情香鸡翼</div>
-                            <div class="describe">以特选鸡翼经美味香料腌制烘烤而成，鲜嫩香滑，汁多入味。</div>
+                            <div class="food_name">超级至尊披萨</div>
+                            <div class="food_describe">腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。</div>
                             <div>
                                 <span>月销量94份</span>
                                 <span>好评率85%</span>
@@ -76,25 +134,53 @@
                              <div>
                                  <p><span><span>￥</span>49</span> 起</p>
                                  <!-- 控制数量组件 -->
-                                 <div class="cartWrap"><cartcontrol></cartcontrol></div>
+                                 <div class="cartcontrol_wrap"><cartcontrol></cartcontrol></div>
+                             </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="food_img"><img src="../../../assets/img/pizza.png" width="100%"></div>
+                        <div class="food_content">
+                            <div class="food_name">超级至尊披萨</div>
+                            <div class="food_describe">腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。</div>
+                            <div>
+                                <span>月销量94份</span>
+                                <span>好评率85%</span>
+                             </div>
+                             <div>
+                                 <p><span><span>￥</span>49</span>  起</p>
+                                 <!-- 控制数量组件 -->
+                                 <div class="cartcontrol_wrap"><cartcontrol></cartcontrol></div>
                              </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- 头部公告提示弹框部分 -->
+        <div class="notice"></div>
+        <!-- 滚动菜单选择列表结束-->
+        <cart></cart>
+        <!--  -->
     </div>
 </template>
 <script lang="babel">
     import {mapGetters} from 'vuex';
     import api from '../api';
     import cartcontrol from '../components/cartcontrol.vue';
+    import cart from '../components/footCart.vue';
     export default {
         data() {
             return {};
         },
+         computed: {
+            ...mapGetters({
+                // Index:'Index/Index'
+            })
+        },
         components: {
             cartcontrol,
+            cart,
         }
     }
 

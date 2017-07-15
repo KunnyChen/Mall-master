@@ -1,9 +1,9 @@
 /*
- * @Author: Mink
+ * @Author: KunnyChen
  * @description: Vue 主要库
  * @Date: 2017-04-27 11:11:36
- * @Last Modified by: Mink
- * @Last Modified time: 2017-05-06 17:09:52
+ * @Last Modified by:   KunnyChen
+ * @Last Modified time: 2017-07-15 17:07:12
  */
 // 引入公共样式
 import '~/assets/css/style.css';

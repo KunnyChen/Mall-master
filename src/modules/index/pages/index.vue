@@ -39,6 +39,7 @@
                          border: 1px solid
                          border-radius: 2px
                          padding: 0 .2em
+                         margin-right:3px
                      .brand
                          background:rgb(255, 212, 19)
                          padding: .2em
@@ -140,7 +141,7 @@
             if (scrollTop) ls.set(path, scrollTop);
             else ls.remove(path);
             next();
-            this._setDefault(this);
+            // this._setDefault(this);
         },
         metaInfo() {
             var title = this.$store.state.title;
