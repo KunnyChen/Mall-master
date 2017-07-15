@@ -23,10 +23,23 @@
         <span class="cart_decrease"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
         <!-- 数量 -->
         <span class="cart_count">1</span>
-        <!-- 加号 -->
-        <span class="cart_add"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
         <!-- 选规格 -->
-        <span class="specification">选规格</span>
+        <span class="specification" @click="Choose" v-if="isChoose">选规格</span>
+        <!-- 加号 -->
+        <span class="cart_add" v-else><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
     </div>
 </template>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+    export default{
+        data() {
+            return{
+                isChoose: false
+            };
+        },
+        methods: {
+            Choose() {
+
+            },
+        },
+    }
+</script>
