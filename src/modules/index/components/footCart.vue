@@ -149,7 +149,9 @@ import cartcontrol from './cartcontrol.vue';
     export default{
         data() {
             return{
-                listShow: false
+                listShow: false,
+                totalPrice:15,
+                minPrice:20,
             };
         },
         methods: {

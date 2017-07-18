@@ -29,6 +29,20 @@
                     background:rgb(76, 217, 100)
                     padding:2px
                     border-radius:3px
+        .change_show_type
+            display:flex
+            line-height: 45px
+            border-bottom:1px solid #eee
+            div
+                flex:1
+                text-align:center
+                color:rgb(76, 76, 76)
+                font-weight:600
+            .activity_show
+                color: #3190e8
+                border-bottom: 2px solid #2196F3
+                span
+                    position: relative
         .foodWrap
             display:flex
             margin-bottom: 60px
@@ -51,6 +65,7 @@
                     line-height:45px
                     background: rgb(248, 248, 248)
                     font-size:1.5em
+                    padding-left:10px
                 &>ul>li
                     display:flex
                     padding: 3%
@@ -105,8 +120,17 @@
             <!-- 活动详情 End -->
         </header>
         <!-- 商家头部区域结束 -->
-        <!-- 滚动菜单选择列表开始-->
-        <div class="foodWrap">
+        <!-- 商品和评价切换 -->
+        <div class="change_show_type">
+            <div :class='{activity_show: changeShowType =="food"}' @click="changeShowType='food'">
+                <span>商品</span>
+            </div>
+            <div :class='{activity_show: changeShowType =="rating"}' @click="changeShowType='rating'">
+                <span>评价</span>
+            </div>
+        </div>
+        <!-- 商品：food滚动菜单选择列表开始-->
+        <div class="foodWrap" v-show="changeShowType =='food'">
             <!-- 左侧菜单 -->
             <div class="food_menu">
                 <ul>
@@ -157,10 +181,19 @@
                 </ul>
             </div>
         </div>
+        <!-- 评价：rating -->
+        <div class="rating_container" v-show="changeShowType =='rating'">
+            <!-- 综合评分情况 -->
+            <div class="rating_case">
+            </div>
+            <!-- 评价内容分类 -->
+            <div class="rating_classify"></div>
+            <!-- 用户评价列表 -->
+        </div>
         <!-- 头部公告提示弹框部分 -->
         <div class="notice"></div>
-        <!-- 滚动菜单选择列表结束-->
-        <cart></cart>
+        <!-- 脚部购物车部分，只有在商品侧才会显示 -->
+        <cart v-show="changeShowType =='food'"></cart>
         <!--  -->
     </div>
 </template>
@@ -171,7 +204,9 @@
     import cart from '../components/footCart.vue';
     export default {
         data() {
-            return {};
+            return {
+                  changeShowType: 'food',
+            };
         },
          computed: {
             ...mapGetters({
