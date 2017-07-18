@@ -116,6 +116,7 @@
             <div class="min_price" v-else>还差￥20.00元起送</div>
         </div>
         <!-- 购物车列表，从下往上滑出 -->
+        <transition enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutRight" mode="out-in">
             <div class="cart_list" v-show="listShow">
                 <div class="content_wrap">
                     <div class="cart_list_head">
@@ -142,6 +143,7 @@
                     </div>
                 </div>
             </div>
+        </transition>
     </div>
 </template>
 <script type="text/javascript">
