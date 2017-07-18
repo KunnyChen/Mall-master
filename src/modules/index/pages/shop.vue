@@ -96,6 +96,64 @@
                             .cartcontrol_wrap
                                 position: absolute
                                 right: 0
+        .rating_container
+            .rating_case
+                display:flex
+                padding: 3% 0
+                border-bottom: 6px solid #eee
+                color: #888
+                .rating_total
+                    flex:1
+                    text-align:center
+                    line-height:1.8em
+                    p:first-child
+                        color:rgb(255, 102, 0)
+                        font-size:2em
+                .rating_detail
+                    flex:1
+                    text-align:center
+                    line-height:1.8em
+                    p
+                        .rating_score
+                            color:rgb(255, 102, 0)
+                            padding-left:5px
+            .rating_classify
+                padding:3% 4%
+                border-bottom:1px solid #eee
+                span
+                    background:rgb(235, 245, 255)
+                    color:#9E9E9E
+                    display:inline-block
+                    padding:.5em
+                    border-radius:5px
+                    margin-bottom:5px
+                    margin-right:3px
+                .current_classify
+                    background:rgb(49, 144, 232)
+                    color:#fff
+            .rating_list
+                ul > li
+                    padding:3%
+                    border-bottom:1px solid #eee
+                    display:flex
+                    &:last-child
+                        border:0
+                        .avatar
+                            flex:0 0 50px
+                            width:50px
+                            height:50px
+                            margin-right: 10px
+                            img
+                                width:100%
+                                border-radius:50%
+                        .list_content
+                            flex:1
+                            line-height:1.8em
+                            color:#888
+                            &>div:first-child
+                                span:nth-child(2)
+                                    float:right
+
 
 </style>
 <template>
@@ -185,10 +243,46 @@
         <div class="rating_container" v-show="changeShowType =='rating'">
             <!-- 综合评分情况 -->
             <div class="rating_case">
+                <div class="rating_total">
+                    <p>4.6</p>
+                    <p>综合评价</p>
+                    <p>高于周边商家76.9%</p>
+                </div>
+                <div class="rating_detail">
+                    <p>服务态度<span class="rating_score">4.7</span></p>
+                    <p>菜品评价<span class="rating_score">4.8</span></p>
+                    <p>送达时间：45分</p>
+                </div>
             </div>
             <!-- 评价内容分类 -->
-            <div class="rating_classify"></div>
+            <div class="rating_classify">
+                <span class="current_classify">全部(473)</span>
+                <span>满意(188)</span>
+                <span>不满意(22)</span>
+                <span>有图(45)</span>
+                <span>服务不错(55)</span>
+                <span>干净卫生(165)</span>
+            </div>
             <!-- 用户评价列表 -->
+            <div class="rating_list pub_content">
+                <ul>
+                    <li>
+                        <div class="avatar"><img src="../../../assets/img/elmlogo.jpeg"></div>
+                        <div class="list_content">
+                            <div>
+                                <span>4*********b</span>
+                                <span>2017-07-18</span>
+                            </div>
+                            <div class="comment">很好吃哦，送得也很快。</div>
+                            <div class="public_img_wrap">
+                                <ul>
+                                    <li><img src="../../../assets/img/pizza.png" ></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- 头部公告提示弹框部分 -->
         <div class="notice"></div>
@@ -202,6 +296,8 @@
     import api from '../api';
     import cartcontrol from '../components/cartcontrol.vue';
     import cart from '../components/footCart.vue';
+    // import '../js/viewer.min.css';
+    // import '../js/viewer.min.js';
     export default {
         data() {
             return {
@@ -210,13 +306,13 @@
         },
          computed: {
             ...mapGetters({
-                // Index:'Index/Index'
+                // Shop:'Shop/Shop'
             })
         },
         components: {
             cartcontrol,
             cart,
-        }
+        },
     }
 
 </script>
