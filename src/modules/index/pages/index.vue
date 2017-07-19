@@ -45,7 +45,7 @@
                          padding: .2em
                          border-radius: 2px
                          margin-right: 2px;
-                .star_graded
+                 .star_graded
                     margin-bottom: 3%
                     position: relative
                     .sell
@@ -57,7 +57,7 @@
                         float: right
                         position: absolute
                         right: 0
-                .delivery
+                 .delivery
                     position: relative
                     .delivery_fee
                         color:rgb(51, 51, 51)

@@ -17,6 +17,7 @@ var DefConf = {},
         timeout: 3000,
         apis: {
             'index': 'index.json',
+            'shop': 'shop.json',
         }
     };
 

@@ -1,10 +1,9 @@
 /**
- * @Author: Mink
- * @Contact: mink@feiruo.moe
+ * @Author: KunnyChen
  * @Description: 页面路由
  * @Date: 2017-07-13 10:27:22
  * @Last Modified by:   KunnyChen
- * @Last Modified time: 2017-07-14 15:24:19
+ * @Last Modified time: 2017-07-19 15:37:02
  */
 
 import Vue from 'vue';

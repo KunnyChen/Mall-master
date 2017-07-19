@@ -296,8 +296,6 @@
     import api from '../api';
     import cartcontrol from '../components/cartcontrol.vue';
     import cart from '../components/footCart.vue';
-    // import '../js/viewer.min.css';
-    // import '../js/viewer.min.js';
     export default {
         data() {
             return {
@@ -306,12 +304,21 @@
         },
          computed: {
             ...mapGetters({
-                // Shop:'Shop/Shop'
+                Shop:'Shop/Shop'
             })
         },
         components: {
             cartcontrol,
             cart,
+        },
+        async mounted() {
+            var id = this.$route.params.id || this.$route.query.id;
+             await this.$store.dispatch('Shop/Shop');
+            await this.$nextTick();
+            const path = this.$route.path;
+            const scrollTop = ls.get(path) || 0;
+            ls.remove(path);
+            window.scrollTo(0, scrollTop);
         },
     }
 

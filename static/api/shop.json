@@ -7,7 +7,116 @@
         "shopName":"必胜客",
         "arrival_time":"40分钟",
         "deliveryFee":"5",
-
+        "evaluation":"4.6",
+        "rate":"76.9%",
+        "delivery_time":"45分钟",
+        "minPrice":"20",
+        "category": [
+            {
+                "id": "001",
+                "name": "热销量"
+            },
+            {
+                "id": "002",
+                "name": "优惠"
+            },
+            {
+                "id": "003",
+                "name": "尝鲜"
+            },
+            {
+                "id": "004",
+                "name": "饭类"
+            },
+            {
+                "id": "005",
+                "name": "Pizza"
+            },
+            {
+                "id": "006",
+                "name": "意大利面"
+            }
+        ],
+        "foodList":[
+            {
+                "foodname":"超级至尊披萨",
+                "foodDesc":"腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。",
+                "sales":"94",
+                "goodRate":"85%",
+                "foodPrice":"￥49",
+                "picture":"/static/pizza.png"
+            },
+            {
+                "foodname":"超级至尊披萨",
+                "foodDesc":"腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。",
+                "sales":"94",
+                "goodRate":"85%",
+                "foodPrice":"￥49",
+                "picture":"/static/pizza.png"
+            },
+            {
+                "foodname":"超级至尊披萨",
+                "foodDesc":"腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。",
+                "sales":"94",
+                "goodRate":"85%",
+                "foodPrice":"￥49",
+                "picture":"/static/pizza.png"
+            },
+            {
+                "foodname":"超级至尊披萨",
+                "foodDesc":"腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。",
+                "sales":"94",
+                "goodRate":"85%",
+                "foodPrice":"￥49",
+                "picture":"/static/pizza.png"
+            },
+            {
+                "foodname":"超级至尊披萨",
+                "foodDesc":"腊肉香肠，火腿，牛肉配菠萝、蘑菇、洋葱、青椒等蔬菜水果，口口满足好滋味。",
+                "sales":"94",
+                "goodRate":"85%",
+                "foodPrice":"￥49",
+                "picture":"/static/pizza.png"
+            }
+        ],
+        "classify":[
+            { "item":"全部","number":"473"},
+            { "item":"满意","number":"188"},
+            { "item":"不满意","number":"22"},
+            { "item":"有图","number":"45"},
+            { "item":"服务不错","number":"55"},
+            { "item":"干净卫生","number":"165"}
+        ],
+        "commentList":[
+            {
+                "avatar":"/static/elmlogo.jpeg",
+                "username":"4*********b",
+                "rateTime":"2017-07-19",
+                "content":"很好吃哦，送得也很快~",
+                "publicImg":"/static/pizza.png"
+            },
+            {
+                "avatar":"/static/elmlogo.jpeg",
+                "username":"4*********b",
+                "rateTime":"2017-07-19",
+                "content":"很好吃哦，送得也很快~",
+                "publicImg":"/static/pizza.png"
+            },
+            {
+                "avatar":"/static/elmlogo.jpeg",
+                "username":"4*********b",
+                "rateTime":"2017-07-19",
+                "content":"很好吃哦，送得也很快~",
+                "publicImg":"/static/pizza.png"
+            },
+            {
+                "avatar":"/static/elmlogo.jpeg",
+                "username":"4*********b",
+                "rateTime":"2017-07-19",
+                "content":"很好吃哦，送得也很快~",
+                "publicImg":"/static/pizza.png"
+            }
+        ]
 
     }
 }
