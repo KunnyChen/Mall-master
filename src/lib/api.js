@@ -3,7 +3,7 @@
  * @description: api组件化
  * @Date: 2017-04-27 11:10:41
  * @Last Modified by:   KunnyChen
- * @Last Modified time: 2017-07-19 15:48:01
+ * @Last Modified time: 2017-07-21 14:49:31
  */
 import axios from 'axios';
 var isLoading = false;
@@ -74,3 +74,4 @@ export default {
         return axios(opt).then(checkStatus).then(checkCode);
     }
 };
+

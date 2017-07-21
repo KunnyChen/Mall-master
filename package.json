@@ -1,8 +1,8 @@
 {
-    "name": "axd",
+    "name": "sellMll",
     "version": "2.0.0",
-    "description": "安",
-    "author": "Mink <mink@feiruo.moe>",
+    "description": "sell",
+    "author": "KunnyChen <abc582077457@qq.com>",
     "license": "MIT",
     "private": true,
     "scripts": {

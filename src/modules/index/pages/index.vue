@@ -70,38 +70,38 @@
 </style>
 <template>
     <div  class="wrapper">
-    <!-- banner滑动区域 -->
-        <div class="banner" >
-            <div class="banner_item" v-for="item in Index.banner">
-                <div class="banner_item_img"><img :src="item.img" alt=""></div>
-                <div class="banner_item_text">{{item.title}}</div>
+        <!-- banner滑动区域 -->
+            <div class="banner" >
+                <div class="banner_item" v-for="item in Index.banner">
+                    <div class="banner_item_img"><img :src="item.img" alt=""></div>
+                    <div class="banner_item_text">{{item.title}}</div>
+                </div>
             </div>
-        </div>
-        <!-- 附近的商家列表 -->
-        <div class="merchant" @click="goTo('/shop')">
-            <div class="merchant_title"><span><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>附近商家</div>
-            <ul>
-                <li class="merchant_list">
-                    <div class="merchant_list_img"><img src="../../../assets/img/preloader.png"></div>
-                    <div class="merchant_desc">
-                        <div class="merchant_name">
-                            <span class="brand">品牌</span>
-                            bigbang韩国炸鸡
-                            <span class="feature_tag">票</span>
+            <!-- 附近的商家列表 -->
+            <div class="merchant" @click="goTo('/shop')">
+                <div class="merchant_title"><span><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>附近商家</div>
+                <ul>
+                    <li class="merchant_list">
+                        <div class="merchant_list_img"><img src="../../../assets/img/preloader.png"></div>
+                        <div class="merchant_desc">
+                            <div class="merchant_name">
+                                <span class="brand">品牌</span>
+                                bigbang韩国炸鸡
+                                <span class="feature_tag">票</span>
+                            </div>
+                            <div class="star_graded">
+                                <span style="display: inline-block;"><star :score="grade"></star></span>
+                                <span class="sell">月销售669单</span>
+                                <span class="delivery_tag">蜂鸟专送</span>
+                            </div>
+                            <div class="delivery">
+                                <span class="delivery_fee">￥0 起送 / 配送费￥8</span>
+                                <span class="delivery_detail">1.87km / <span class="delivery_time">59分钟</span></span>
+                            </div>
                         </div>
-                        <div class="star_graded">
-                            <span style="display: inline-block;"><star :score="grade"></star></span>
-                            <span class="sell">月销售669单</span>
-                            <span class="delivery_tag">蜂鸟专送</span>
-                        </div>
-                        <div class="delivery">
-                            <span class="delivery_fee">￥0 起送 / 配送费￥8</span>
-                            <span class="delivery_detail">1.87km / <span class="delivery_time">59分钟</span></span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                    </li>
+                </ul>
+            </div>
     </div>
 </template>
 <script lang="babel">

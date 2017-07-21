@@ -138,14 +138,14 @@
                     display:flex
                     &:last-child
                         border:0
-                        .avatar
-                            flex:0 0 50px
-                            width:50px
-                            height:50px
-                            margin-right: 10px
-                            img
-                                width:100%
-                                border-radius:50%
+                    .avatar
+                        flex:0 0 50px
+                        width:50px
+                        height:50px
+                        margin-right: 10px
+                        img
+                            width:100%
+                            border-radius:50%
                         .list_content
                             flex:1
                             line-height:1.8em
@@ -266,6 +266,21 @@
             <!-- 用户评价列表 -->
             <div class="rating_list pub_content">
                 <ul>
+                    <li>
+                        <div class="avatar"><img src="../../../assets/img/elmlogo.jpeg"></div>
+                        <div class="list_content">
+                            <div>
+                                <span>4*********b</span>
+                                <span>2017-07-18</span>
+                            </div>
+                            <div class="comment">很好吃哦，送得也很快。</div>
+                            <div class="public_img_wrap">
+                                <ul>
+                                    <li><img src="../../../assets/img/pizza.png" ></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <div class="avatar"><img src="../../../assets/img/elmlogo.jpeg"></div>
                         <div class="list_content">
